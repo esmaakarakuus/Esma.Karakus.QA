@@ -1,39 +1,30 @@
-Insider Test Automation Project
-Bu proje, Insider'ın kariyer sayfası ve QA iş ilanları ile ilgili test senaryolarını otomatize etmek için oluşturulmuştur. Proje, Java + Selenium kullanılarak geliştirilmiştir ve Page Object Model (POM) prensiplerine uygun olarak tasarlanmıştır.
+# Insider Test Automation Project
 
-Test Senaryoları
-Aşağıdaki test senaryoları otomatize edilmiştir:
+## Proje Açıklaması
+Bu proje, Insider'ın kariyer sayfası ve QA iş ilanları ile ilgili test senaryolarını otomatize etmek amacıyla geliştirilmiştir.
+Proje, **Java + Selenium** kullanılarak oluşturulmuş olup, **Page Object Model (POM)** prensiplerine uygun şekilde tasarlanmıştır.
 
-Insider Ana Sayfasının Açılması:
+## Otomatize Edilen Test Senaryoları
 
-https://useinsider.com/ adresine gidilir.
+### 1. Insider Ana Sayfasının Açılması
+- **Adım 1:** [Insider ana sayfasına](https://useinsider.com/) gidilir.
+- **Adım 2:** Insider ana sayfasının başarıyla açıldığı doğrulanır.
 
-Insider ana sayfasının başarıyla açıldığı kontrol edilir.
+### 2. Kariyer Sayfasının Kontrolü
+- **Adım 1:** Navigasyon çubuğundaki **"Company"** menüsünden **"Careers"** seçeneği seçilir.
+- **Adım 2:** Açılan kariyer sayfasında **"Locations", "Teams", "Life at Insider"** bölümlerinin görüntülendiği doğrulanır.
 
-Kariyer Sayfasının Kontrolü:
+### 3. QA İş İlanlarının Filtrelenmesi
+- **Adım 1:** [Quality Assurance iş ilanları](https://useinsider.com/careers/quality-assurance/) sayfasına gidilir.
+- **Adım 2:** **"See all QA jobs"** butonuna tıklanır.
+- **Adım 3:** İş ilanları, **"Location: Istanbul, Turkey"** ve **"Department: Quality Assurance"** filtreleri ile filtrelenir.
+- **Adım 4:** Filtreleme sonucunda listelenen iş ilanlarının doğru olduğu doğrulanır.
 
-Navigasyon çubuğundaki "Company" menüsünden "Careers" seçeneği seçilir.
+### 4. İş İlanlarının Detaylarının Kontrolü
+- **Adım 1:** Filtrelenen iş ilanlarının **"Position", "Department"** ve **"Location"** bilgilerinin doğru olduğu kontrol edilir.
+- **Adım 2:** **"Position"** ve **"Department"** alanlarının **"Quality Assurance"**, **"Location"** alanının ise **"Istanbul, Turkey"** içerdiği doğrulanır.
 
-Kariyer sayfasının açıldığı ve "Locations", "Teams", "Life at Insider" bölümlerinin görüntülendiği kontrol edilir.
+### 5. Lever Başvuru Formuna Yönlendirme
+- **Adım 1:** **"View Role"** butonuna tıklanır.
+- **Adım 2:** Kullanıcının **Lever başvuru formu** sayfasına yönlendirildiği doğrulanır.
 
-QA İş İlanlarının Filtrelenmesi:
-
-https://useinsider.com/careers/quality-assurance/ adresine gidilir.
-
-"See all QA jobs" butonuna tıklanır.
-
-İş ilanları, "Location: Istanbul, Turkey" ve "Department: Quality Assurance" filtreleri kullanılarak filtrelenir.
-
-Filtrelenen iş ilanlarının listelendiği kontrol edilir.
-
-İş İlanlarının Detaylarının Kontrolü:
-
-Filtrelenen iş ilanlarının "Position", "Department" ve "Location" bilgilerinin doğru olduğu kontrol edilir.
-
-"Position" ve "Department" alanlarının "Quality Assurance", "Location" alanının ise "Istanbul, Turkey" içerdiği doğrulanır.
-
-Lever Başvuru Formuna Yönlendirme:
-
-"View Role" butonuna tıklanır.
-
-Lever başvuru formu sayfasına yönlendirildiği kontrol edilir.
