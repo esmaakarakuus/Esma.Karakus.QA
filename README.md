@@ -60,3 +60,4 @@ Projede **Log4j** kullanılarak test süreci detaylı bir şekilde loglanmaktad�
 Test adımlarından herhangi biri başarısız olursa, otomatik olarak ekran görüntüsü alınır ve **screenshots** klasörüne kaydedilir.
 
 ### Ekran Videosu Kaydı
+https://www.loom.com/share/7da209f9865747e5aa69611480f5df11?sid=3824bac6-4dea-4f04-914a-f806911245e3
