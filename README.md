@@ -1,30 +1,71 @@
-# Insider Test Automation Project
+Insider Test Automation Project
+Bu proje, Insider'ın kariyer sayfası ve QA iş ilanları ile ilgili test senaryolarını otomatize etmek için oluşturulmuştur. Proje, Java + Selenium kullanılarak geliştirilmiştir ve Page Object Model (POM) prensiplerine uygun olarak tasarlanmıştır.
 
-## Proje Açıklaması
-Bu proje, Insider'ın kariyer sayfası ve QA iş ilanları ile ilgili test senaryolarını otomatize etmek amacıyla geliştirilmiştir.
-Proje, **Java + Selenium** kullanılarak oluşturulmuş olup, **Page Object Model (POM)** prensiplerine uygun şekilde tasarlanmıştır.
+Test Senaryoları
+Aşağıdaki test senaryoları otomatize edilmiştir:
 
-## Otomatize Edilen Test Senaryoları
+Insider Ana Sayfasının Açılması:
 
-### 1. Insider Ana Sayfasının Açılması
-- **Adım 1:** [Insider ana sayfasına](https://useinsider.com/) gidilir.
-- **Adım 2:** Insider ana sayfasının başarıyla açıldığı doğrulanır.
+https://useinsider.com/ adresine gidilir.
 
-### 2. Kariyer Sayfasının Kontrolü
-- **Adım 1:** Navigasyon çubuğundaki **"Company"** menüsünden **"Careers"** seçeneği seçilir.
-- **Adım 2:** Açılan kariyer sayfasında **"Locations", "Teams", "Life at Insider"** bölümlerinin görüntülendiği doğrulanır.
+Insider ana sayfasının başarıyla açıldığı kontrol edilir.
 
-### 3. QA İş İlanlarının Filtrelenmesi
-- **Adım 1:** [Quality Assurance iş ilanları](https://useinsider.com/careers/quality-assurance/) sayfasına gidilir.
-- **Adım 2:** **"See all QA jobs"** butonuna tıklanır.
-- **Adım 3:** İş ilanları, **"Location: Istanbul, Turkey"** ve **"Department: Quality Assurance"** filtreleri ile filtrelenir.
-- **Adım 4:** Filtreleme sonucunda listelenen iş ilanlarının doğru olduğu doğrulanır.
+Kariyer Sayfasının Kontrolü:
 
-### 4. İş İlanlarının Detaylarının Kontrolü
-- **Adım 1:** Filtrelenen iş ilanlarının **"Position", "Department"** ve **"Location"** bilgilerinin doğru olduğu kontrol edilir.
-- **Adım 2:** **"Position"** ve **"Department"** alanlarının **"Quality Assurance"**, **"Location"** alanının ise **"Istanbul, Turkey"** içerdiği doğrulanır.
+Navigasyon çubuğundaki "Company" menüsünden "Careers" seçeneği seçilir.
 
-### 5. Lever Başvuru Formuna Yönlendirme
-- **Adım 1:** **"View Role"** butonuna tıklanır.
-- **Adım 2:** Kullanıcının **Lever başvuru formu** sayfasına yönlendirildiği doğrulanır.
+Kariyer sayfasının açıldığı ve "Locations", "Teams", "Life at Insider" bölümlerinin görüntülendiği kontrol edilir.
 
+QA İş İlanlarının Filtrelenmesi:
+
+https://useinsider.com/careers/quality-assurance/ adresine gidilir.
+
+"See all QA jobs" butonuna tıklanır.
+
+İş ilanları, "Location: Istanbul, Turkey" ve "Department: Quality Assurance" filtreleri kullanılarak filtrelenir.
+
+Filtrelenen iş ilanlarının listelendiği kontrol edilir.
+
+İş İlanlarının Detaylarının Kontrolü:
+
+Filtrelenen iş ilanlarının "Position", "Department" ve "Location" bilgilerinin doğru olduğu kontrol edilir.
+
+"Position" ve "Department" alanlarının "Quality Assurance", "Location" alanının ise "Istanbul, Turkey" içerdiği doğrulanır.
+
+Lever Başvuru Formuna Yönlendirme:
+
+"View Role" butonuna tıklanır.
+
+
+## Proje Yapısı
+```
+src
+├── main
+│   ├── java
+│   │   ├── pages
+│   │   │   ├── BasePage.java
+│   │   │   ├── HomePage.java
+│   │   │   ├── CareersPage.java
+│   │   │   ├── CareersQaPage.java
+│   │   │   ├── OpenPositionsPage.java
+│   │   ├── utilities
+│   │   │   ├── Log.java
+│   │   │   ├── ScreenshotUtil.java
+│   ├── resources
+│   │   ├── log4j2.properties
+├── test
+│   ├── java
+│   │   ├── tests
+│   │   │   ├── BaseTest.java 
+│   │   │   ├── InsiderCareerTestFlow.java
+```
+
+## Log4j Entegrasyonu
+Projede **Log4j** kullanılarak test süreci detaylı bir şekilde loglanmaktadır. Loglar, konsola ve dosyaya yazılır. Log4j konfigürasyonu **log4j2.properties** dosyasında yapılmıştır.
+
+## Ekran Görüntüsü ve Video Kaydı
+
+### Ekran Görüntüsü Alma
+Test adımlarından herhangi biri başarısız olursa, otomatik olarak ekran görüntüsü alınır ve **screenshots** klasörüne kaydedilir.
+
+### Ekran Videosu Kaydı
