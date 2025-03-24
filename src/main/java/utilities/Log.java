@@ -1,4 +1,4 @@
-package utility;
+package utilities;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.model.Status;
